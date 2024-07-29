@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Now</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* search icon in search bar */
+      .form-control{
+            background: url("assets/search.png") no-repeat left;
+            background-size: 20px;
+            background-color: rgb(246, 242, 242);
+        }
+        p{
+            margin-top: 10px;
+            /* margin-bottom: 2px; */ 
+            font-weight: 500;
+        }
+        #dropdownMenu2{
+            margin-right: 20px;
+            font-weight: 500;
+        }
+
+        body{
+            background-color: rgb(206, 206, 206);
+        }
+        /* Hide Product Details */
+        /* #electronics,#fashion, #home,#beauty,#sports,#books,#toys,#grocery,#automative,#health,#office{
+            display: none;
+        } */
+        
+        /* hide product Type */
+
+        /* #phone,#computer,#tv,#camera,#men,#women,#kids,#furnitures,#home_decor,#kitchen,#skincare,#haircare,#makeup,#personal_care,#sports_equipment, #apperals,#Nutrition,#books_type,#music,#movies,#toys_type,#baby_type_product,#kids_cloth{
+            display: none;
+        } */
+        /* #Beverages,#snacks,#Pantry_Staples,#Gourmet_food,#car,#bike,#car_care,#health_device,#supplement,#personal_care,#office_furnitures,#Stationery,#office_electronics{
+            display: none;
+        } */
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+                <div class="nav1" >
+                    <a class="navbar-brand" href="#">VibeVault</a>
+                </div>
+             
+                <div class="nav2">
+                    <input class="search_bar form-control" type="search" placeholder="Search Here...">
+    
+                   
+                    <a class="navbar-brand navalign" href="#"><img src="assets/cart.png" class="cart_img" alt="cart image">Cart</a>
+                    <a class="navbar-brand seller navalign" href="#">Seller</a>
+                    <button class="nav_button dropdown-toggle navalign" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        User
+                    </button>
+        
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a href="login.html"><button class="dropdown-item" type="button">My Profile</button></a></li>
+                        <li><button class="dropdown-item" type="button">Orders</button></li>
+                        <li><button class="dropdown-item" type="button">Wishlist</button></li>
+                        <li><button class="dropdown-item" type="button">Notifications</button></li>
+                        <li><button class="dropdown-item" type="button">Contact Us</button></li>
+                        <li><button class="dropdown-item" type="button">About Us</button></li>
+                        <li><button class="dropdown-item" type="button">Logout</button></li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+   
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 filter">
+                    <h6 class="cutomized_filter">Customized Filter</h6>
+                    <hr>
+                    <p class="filter_text">Category</p>
+                    <select name="" id="category">
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home_furniture">Home & Furniture</option>
+                        <option value="beauty_personal_care">Beauty & Personal Care</option>
+                        <option value="sports_equipment">Sports & Outdoors</option>
+                        <option value="books">Books & Media</option>
+                        <option value="toys">Toys, Kids & Baby</option>
+                        <option value="Grocery">Grocery & Gourmet Food</option>
+                        <option value="automative">Automotive</option>
+                        <option value="health_device">Health & Wellness</option>
+                        <option value="office_supplies">Office Supplies</option>
+
+
+                    </select>
+                    <p class="filter_text">Product</p>
+                   <select name="" id="product">
+                            <!-- Electronics Product -->
+                            <optgroup id="electronics" class="all_category">
+                                <option value="">Mobile Phones</option>
+                                <option value="">Computers & Tablets</option>
+                                <option value="">TV & Home Appliances</option>
+                                <option value="">Cameras</option>
+                            </optgroup>
+                            <!-- Fashion Products-->
+                            <optgroup id="fashion" class="all_category" label="Fashion Category">
+                                <option value="">Men</option>
+                                <option value="">Women</option>
+                                <option value="">Kids</option>
+                            
+                            </optgroup>
+                           <!-- Home & Furniture -->
+                            <optgroup id="home" class="all_category">
+                                <option value="">Furniture</option>
+                                <option value="">Home Decor</option>
+                                <option value="">Kitchen & Dining</option>
+
+                            </optgroup>
+<!-- Beauty & Personal Care -->
+                            <optgroup id="beauty" class="all_category">
+                                <option value="">Skincare</option>
+                                <option value="">Haircare</option>
+                                <option value="">Makeup</option>
+                                <option value="">Personal Care Appliances</option>
+                             
+                            </optgroup>
+<!-- Sports & Outdoors -->
+                            <optgroup id="sports" class="all_category">
+                                <option value="">Sports Equipment</option>
+                                <option value="">Apparel</option>
+                                <option value="">Nutrition & Supplements</option>
+                              
+                            </optgroup>
+<!-- Books & Media -->
+                            <optgroup id="books" class="all_category">
+                                <option value="">Books</option>
+                                <option value="">Music</option>
+                                <option value="">Movies</option>
+                              
+                            </optgroup>
+<!-- Toys, Kids & Baby -->
+                            <optgroup id="toys" class="all_category">
+                                <option value="">Toys</option>
+                                <option value="">Baby Products</option>
+                                <option value="">Kids' Clothing</option>
+
+                              
+                            </optgroup>
+<!-- Grocery & Gourmet Food -->
+                            <optgroup id="grocery" class="all_category">
+
+                                 <option value="">Beverages</option>
+                                 <option value="">Snacks</option>
+                                 <option value="">Pantry Staples</option>
+                                 <option value="">Gourmet Food</option>
+                              
+                            </optgroup>
+<!-- Automotive -->
+                            <optgroup id="automative" class="all_category">
+                                <option value="">Car Accessories</option>
+                                <option value="">Motorbike Accessories</option>
+                                <option value="">Car Care</option>
+
+                              
+                            </optgroup>
+<!-- Health & Wellness -->
+                            <optgroup id="health" class="all_category">
+                                <option value="">Health Devices</option>
+                                <option value="">Supplements</option>
+                                <option value="">Personal Care</option>
+                              
+                            </optgroup>
+<!-- Office Supplies -->
+                            <optgroup id="office" class="all_category">
+                                <option value="">Office Furniture</option>
+                                <option value="">Stationery</option>
+                                <option value="">Office Electronics</option>
+                              
+                            </optgroup>
+                        </select>
+                
+                 
+                   
+                   
+                  <!-- brand -->
+                    <p class="filter_text">Brand</p>
+                    <select name="item_condition" id="item_condition">
+                        <option value="new">New</option>
+                        <option value="renewed">Renewed</option>
+                    </select>
+                    
+                    <!-- Item Condition -->
+                    <p class="filter_text">Item Condition</p>
+
+                    <select name="item_condition" id="item_condition">
+                        <option value="new">New</option>
+                        <option value="renewed">Renewed</option>
+                    </select>
+                  
+                    <!-- Price -->
+                    <p class="filter_text">Price</p>
+                    <select name="item_condition" id="item_condition">
+                        <option value="new">New</option>
+                        <option value="renewed">Renewed</option>
+                    </select>
+                    <!-- Payment Method -->
+                    <p class="filter_text">Payment Method</p>
+                    <select name="payment method" id="Payment_method">
+                        <option value="cash_on_delivery">Cash on Delivery</option>
+                        <option value="Online_transaction">Online Payment Method</option>
+                    </select>
+                   
+                </div>
+                <div class="col-9 division">
+                    <!-- popular items -->
+                    <div class="d-flex">
+                        <div class="p-2 flex-grow-1">Popular Items</div>
+                    </div>
+                    <div class="card_grid ">
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/watch.png" class="card_img" alt="">
+                                <p class="product_name">Analog Watch</p>
+                                <p class="product_price">₹999</p>
+                            </div>
+                        </div>
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/phone.png" class="card_img" alt="">
+                                <p class="product_name">iphone 14 pro</p>
+                                <p class="product_price">₹1,19,999</p>
+                            </div>
+                        </div>
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/shoe.png" class="card_img" alt="">
+                                <p class="product_name">Casuals for Mens</p>
+                                <p class="product_price">₹1,499</p>
+                            </div>
+                        </div>
+    
+                    
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/backpack.png" class="card_img" alt="">
+                                <p class="product_name">Backpack</p>
+                                <p class="product_price">₹599</p>
+                            </div>
+                        </div>
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/shoe.png" class="card_img" alt="">
+                                <p class="product_name">Casuals for Mens</p>
+                                <p class="product_price">₹1,499</p>
+                            </div>
+                        </div>
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/shoe.png" class="card_img" alt="">
+                                <p class="product_name">Casuals for Mens</p>
+                                <p class="product_price">₹1,499</p>
+                            </div>
+                        </div>
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/shoe.png" class="card_img" alt="">
+                                <p class="product_name">Casuals for Mens</p>
+                                <p class="product_price">₹1,499</p>
+                            </div>
+                        </div>
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/shoe.png" class="card_img" alt="">
+                                <p class="product_name">Casuals for Mens</p>
+                                <p class="product_price">₹1,499</p>
+                            </div>
+                        </div>
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/shoe.png" class="card_img" alt="">
+                                <p class="product_name">Casuals for Mens</p>
+                                <p class="product_price">₹1,499</p>
+                            </div>
+                        </div>
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/shoe.png" class="card_img" alt="">
+                                <p class="product_name">Casuals for Mens</p>
+                                <p class="product_price">₹1,499</p>
+                            </div>
+                        </div>
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/shoe.png" class="card_img" alt="">
+                                <p class="product_name">Casuals for Mens</p>
+                                <p class="product_price">₹1,499</p>
+                            </div>
+                        </div>
+    
+                        <div class="card_border">
+                            <div>
+                                <img src="assets/products/shoe.png" class="card_img" alt="">
+                                <p class="product_name">Casuals for Mens</p>
+                                <p class="product_price">₹1,499</p>
+                            </div>
+                        </div>
+    
+                      
+                       
+                       
+                    </div>
+
+                </div>
+
+                <!-- mobile view realignment -->
+                 <div class="col-12">
+
+                 </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
